@@ -36,7 +36,7 @@ porque se nao voce vai querer adaptar seu site pra um dispositivo menor e vai te
 }
 
 * {
-/*	border: 1px solid red;;*/
+	border: 1px solid red;;
 } 
 
 
@@ -44,8 +44,13 @@ body {
 	margin: 0px;
 	background:#141414 no-repeat;
 	background-image: url('punho-icon.png');
-	background-size: 35%;
+	background-size: 700px;
 	background-position:4% 3%;
+	@media(max-width: 480px) {
+		background-size: 250px;
+		background-position: 50% 9%;
+	}
+
 	height: 5000px;
 	font-family: 'poppins';
 
@@ -147,6 +152,9 @@ body {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 150px;
+	@media(max-width: 480px) {
+		margin-bottom: 410px;
+	}
 	;
 
 	#links {
@@ -195,12 +203,18 @@ body {
 #text-card-0 {
 	display: flex;
 	justify-content: center;
+	@media(max-width: 480px) {
+		justify-content: center;
+	}
 	;
 
 	.container {
 		display: flex;
 		flex-direction: column;
 		width: 35%;
+		@media(max-width: 480px) {
+		width: 60%;
+		}
 		padding: 30px;
 		box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.1);
 		border-radius: 5px
@@ -217,7 +231,7 @@ body {
 			}
 			.card-title {
 				font-family: 'allegra';
-				color: WHITE;
+				color: white;
 				font-size: 32px;
 			}
 		}
@@ -295,6 +309,10 @@ body {
 				height: 300px;
 				width: 533px;
 				margin-bottom: 15px;
+				@media(max-width: 480px) {
+					height: 225px;
+					width: 400px;
+				}
 			}
 
 			span {
@@ -302,6 +320,10 @@ body {
 				font-size: 26px;
 				color: #e0b569;
 				text-align: center;
+				@media(max-width: 480px) {
+					font-size: 20px;
+				}
+
 			}
 		}
 
