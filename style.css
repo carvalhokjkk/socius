@@ -1,0 +1,428 @@
+/*dica para estudantes de css, sempre usar valores relativos como %, em, rem ao invéx de fixos igual px. 
+porque se nao voce vai querer adaptar seu site pra um dispositivo menor e vai ter q redesignar valores de 400 linhas de codigo :D */
+
+
+@font-face {
+	font-family: 'allegra';
+	src: url('allegra.ttf');
+}
+@font-face {
+	font-family: 'balltimore';
+	src: url('Balltimore.ttf');
+}
+
+@font-face {
+	font-family:'panton';
+	src: url('Panton.ttf');
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('Poppins.ttf');
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e0b569;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f0ce92;
+}
+
+* {
+/*	border: 1px solid red;;*/
+} 
+
+
+body {
+	margin: 0px;
+	background:#141414 no-repeat;
+	background-image: url('punho-icon.png');
+	background-size: 35%;
+	background-position:4% 3%;
+	height: 5000px;
+	font-family: 'poppins';
+
+}
+
+#notification-header {
+	display: flex;
+	@media(max-width: 480px) {
+		display: none;
+	}
+	height: 0.75%;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	border-radius: 0px 0px 10px 10px;
+	padding-left: 16px;
+	background: #1c1c1c;
+
+
+/*quero morrer*/
+	
+
+	#notification {
+		margin-top: -3px;
+		padding-left: 32px;
+		background: url('notification-icon.png') no-repeat;
+		background-size: 32px 32px;
+		background-position: 2px -3px;
+
+		a, span {
+		cursor: pointer;
+		font-size: 11px;
+		text-decoration: underline;
+		font-weight: bold;
+		color: rgba(255, 255, 255, 0.8);;
+		}
+
+		span {
+			text-decoration: none;
+			margin-right: 8px;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+	a #instagram {
+		background: url('instagram-icon-2.png') no-repeat;
+		background-position: 2% 51%;
+		background-size: 24px;
+		margin-right: 32px;
+		padding: 2px 2px 2px 32px;
+		font-size: 0.6em;
+		color: white;
+		text-decoration: none;
+		
+	}
+}
+
+
+
+#cabecario {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 35px;
+	;
+
+	#logo {
+		display: inline-flex;
+		flex-direction: column;
+
+		img {
+			width: 19em;
+			height: 9.5em;
+
+			@media(max-width: 480px) {
+				width: 12em;
+				height: 6em;
+			}
+
+
+			margin-bottom: 15px;
+		}
+
+		#logo-title {
+			color: white;
+			font-family: allegra;
+			font-size: 4em;
+			@media(max-width: 480px) {
+				font-size: 2.8em;
+			}
+
+			text-align: center;
+		}
+	}
+}
+
+#nav-bar {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 150px;
+	;
+
+	#links {
+		width: 65%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+
+		a {
+			height: 20px;
+			width: 240px;
+			padding: 10px;
+			border: 2px solid #e0b569;
+			background-image: url('button-deco-icon1.png');
+			background-size: 15px 15px;
+			background-repeat: no-repeat;
+			background-position: 95% 50%;
+
+			text-decoration: none;
+			color: #e0b569;
+			transition: all .2s ease;
+			overflow: hidden;
+
+			cursor: pointer;
+			margin-bottom: 3%;
+		}
+
+		a:hover {
+			background-color: rgba(255, 255, 255,0.05);
+			background-image: url('button-deco-icon1.png');
+			background-size: 15px 15px;
+			background-repeat: no-repeat;
+			background-position: 120% 50%;
+		}
+
+		.fast-content {
+			background-image: url('button-deco-icon.png');
+			background-size: 15px 15px;
+			background-repeat: no-repeat;
+			background-position: 95% 50%;
+		}
+
+	}
+}
+
+#text-card-0 {
+	display: flex;
+	justify-content: center;
+	;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		width: 35%;
+		padding: 30px;
+		box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.1);
+		border-radius: 5px
+		;
+
+		.container-header {
+			display: flex;
+			flex-direction: column;
+			;
+			img {
+				height: 100px;
+				width: 202px;
+				margin-bottom: 10px;
+			}
+			.card-title {
+				font-family: 'allegra';
+				color: WHITE;
+				font-size: 32px;
+			}
+		}
+
+		.container-text-box {
+			align-self: center;
+			width: 95%;
+			;
+			p {
+				color: rgba(255, 255, 255, 0.75);
+				font-size: 18px;
+				text-align: justify;
+			}
+		}
+
+		.container-footer {
+			display: flex;
+			justify-content: center;
+
+
+			.instagram-jaba {
+				display: flex;
+				align-items: center;
+				;
+			
+				.icon-container {
+					display: flex;
+					width: 35px;
+					height: 35px;
+					background: #e0b569;
+					border-radius: 50%;
+					align-items: center;
+					justify-content: center;
+					img {
+						width: 25px;
+						height: 25px;
+					}
+					margin-right: 5px;
+				}
+				span {
+					color: #e0b569;
+					font-size: 18px;
+				}
+			}
+		}
+
+	}
+}
+
+#campanhas-container {
+	display: flex;
+	margin: 300px 30px 0px 30px;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	;
+
+	.campanha {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 100px;
+		width: 49%;
+		align-items: center;
+		padding-bottom: ;
+		padding-bottom: 40px;
+		border-bottom: 1px solid white;
+		;
+
+		.logo-campanha {
+			display: inline-flex;
+			flex-direction: column;
+			margin-bottom: 15px;
+			;
+
+			img {
+				height: 300px;
+				width: 533px;
+				margin-bottom: 15px;
+			}
+
+			span {
+				font-family: 'balltimore';
+				font-size: 26px;
+				color: #e0b569;
+				text-align: center;
+			}
+		}
+
+		.campanha-text-box {
+			color: white;
+			text-align: left;
+			width: 800px;
+			line-height: 24px;
+			font-size: 16px;
+			text-align: justify;
+
+			h2 {
+				margin-top: 50px;
+				color: #e0b569;
+			}
+
+			ul {
+				margin-bottom: 30px;
+				list-style: circle;
+			}
+
+			li {
+				margin-bottom: 15px;
+			}
+
+			p a {
+				color: #e0b569;
+			}
+
+		}
+	}
+}
+
+#projetos {
+	display: flex;
+	justify-content: center;
+	margin-top: 300px;
+	;
+
+	#projetos-container {
+		display: flex;
+		flex-wrap: wrap;
+		width: 70%;
+		justify-content: center;
+
+		.projeto {
+			margin-bottom: 300px;
+			padding-bottom: 40px;
+			border-bottom: 1px solid white;
+		}
+
+		.projeto#a-carne-mais-mais-barata {
+			background: url('quebrar-correntes-icon.png') no-repeat;
+			background-position: 300px 346px;
+			background-size: 900px;
+			;
+			.projeto-header {
+				color: rgba(255, 255, 255, 0.5);
+				font-family: 'panton';
+				font-size: 70px;
+				display: flex;
+				padding-bottom: 45px;
+				border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+				;
+				.text-container {
+					display: flex;
+					width: 5%;
+					letter-spacing: 10px;
+				}
+			}
+
+			.projeto-content {
+				color: white;
+				width: 85%;
+				;
+
+				.agenda-projeto p{
+					line-height: 5px;
+					font-size: 14px;
+				}
+
+				h5 {
+					margin-top: -15px;
+				}
+
+				h4 {
+					margin-top: 30px;
+				}
+
+				h2 {
+					margin-top: 50px;
+					color: #e0b569;
+				}
+
+
+			}
+		}
+	}
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 5px;
+	;
+	#logo {
+		display: inline-flex;
+		flex-direction: column;
+
+		img {
+			width: 97px;
+			height: 48px;
+			margin-bottom: 5px;
+		}
+
+		#logo-title {
+			color: white;
+			font-family: allegra;
+			font-size: 23px;
+			text-align: center;
+		}
+	}
+}
+
