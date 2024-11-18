@@ -10,16 +10,29 @@
 
 	<body>
 
-		<div id="notification-header">
-			<div id="notification" onclick="scrol('projetos-container')">
-				<span> CONFIRA:</span> <a><span>Manifestação "A carne mais barata do mercado ainda é a carne negra"</span> </a>
-			</div>
-			<a href="https://www.instagram.com/associus.jm/"><div id="instagram">
-				<span>@associus.jm</span>
-			</div></a>
-			
+		<div id="hamburguer-menu">
+			<button id="hamburguer-button" onclick="showNotification()"></button>
 		</div>
+		
+		<div id="notification-menu">
+			<div id="menu">
+				<div id="notification-area">
+						<div id="notification" onclick="scroll_to('projetos-container'); hideNotification()">
+							<span> CONFIRA:</span> <a><span><span>Manifestação:</span> "A carne mais barata do mercado ainda é a carne negra"</span> </a>
+						</div>
+					</div>
 
+					<a href="https://www.instagram.com/associus.jm/" target="_blank">
+						<div id="instagram">
+							<span>@associus.jm</span>
+						</div></a>e
+				</div>	
+				
+
+
+			<div id="out" onclick="hideNotification()"></div>
+
+		</div>
 
 		<div id="cabecario">
 			<div id="logo">
@@ -30,10 +43,10 @@
 
 		<div id="nav-bar">
 			<div id="links">
-				<a onclick="scrol('')">ATIVIDADES</a>
-				<a onclick="scrol('campanhas-container')">CAMPANHAS</a>
-				<a onclick="scrol('projetos-container')">PROJETOS</a>
-				<a onclick="scrol('')" class="fast-content">SEJA SÓCIO</a>	
+				<button>ATIVIDADES</button>
+				<button onclick="scroll_to('campanhas-container')">CAMPANHAS</button>
+				<button onclick="scroll_to('projetos-container')">PROJETOS</button>
+				<button onclick="" class="fast-content">SEJA SÓCIO</button>	
 			</div>
 		</div>
 
@@ -126,7 +139,7 @@
 					<p>As sócias da Associação Socius convidam todas as pessoas a se unirem a essa causa. A Cores do Futuro precisa de cada contribuição, de cada gesto e de cada voluntária para ser um
 					sucesso. Venha fazer parte dessa corrente de solidariedade e ajude a construir um futuro mais justo e colorido para todos.</p>
 					<p>Saiba mais e participe: Para mais informações sobre a campanha Cores do Futuro, acompanhe nossas redes sociais 
-					<a href="https://instagram.com/associus.jm">@associus.jm</a> ou entre em contato com a nossa equipe. Juntas,
+					<a href="https://instagram.com/associus.jm" target="_blank">@associus.jm</a> ou entre em contato com a nossa equipe. Juntas,
 					podemos fazer a diferença!</p>
 				</div>
 			</div>
@@ -177,12 +190,12 @@
 			
 		</div>
 
-		<footer>
-			<div id="logo">
-				<img src="logo.png">
-				<span id="logo-title">SOCIUS</span>
-			</div>
-		</footer>
+	<footer>
+		<div id="logo">
+			<img src="logo.png">
+			<span id="logo-title">SOCIUS</span>
+		</div>
+	</footer>
 
 	</body>
 	<script src="script.js"></script>
