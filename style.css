@@ -383,7 +383,7 @@ body {
 			background-size: 900px;
 			@media(max-width: 480px) {
 				background-size: 300px;
-				background-position: -20px 480px;
+				background-position: -10px 480px;
 			} 
 			;
 			.projeto-header {
@@ -460,4 +460,3 @@ footer {
 		}
 	}
 }
-
