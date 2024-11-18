@@ -40,7 +40,7 @@ body {
 	margin: 0px;
 	background:#141414 no-repeat;
 	background-image: url('punho-icon.png');
-	background-size: 700px;
+	background-size: 600px;
 	background-position:4% 3%;
 	@media(max-width: 480px) {
 		background-size: 250px;
